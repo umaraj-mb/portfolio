@@ -760,6 +760,12 @@ ul { list-style: none; }
   font-size: 0.9rem;
   margin-bottom: 6px;
 }
+.achieve-card p strong {
+  display: inline;
+  font-size: inherit;
+  font-weight: 600;
+  margin: 0;
+}
 .achieve-card p {
   font-size: 0.84rem;
   color: var(--text-secondary);

@@ -3,51 +3,630 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Umaraj MB — Electronics and Communication Engineering portfolio." />
-  <title>Umaraj MB | Electronics Engineer</title>
+  <meta name="description" content="Umaraj MB — Electronics and Embedded Systems Engineer Portfolio. SMT assembly, PCB design, FPGA, and AI-based embedded solutions." />
+  <meta name="keywords" content="Umaraj MB, Embedded Systems, PCB Design, SMT Line, Verilog FPGA, Raspberry Pi, ESP32, Electronics Engineer" />
+  <title>Umaraj MB | PCB Design Engineer</title>
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheets -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="scroll-progress" aria-hidden="true"></div>
-  <div class="noise"></div><div class="cursor-glow"></div>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-    <div class="container"><a class="navbar-brand" href="#home"><span>&lt;</span>UMARAJ<span>/&gt;</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto gap-lg-3"><li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li><li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li><li class="nav-item"><a class="nav-link nav-contact" href="#contact">Contact</a></li></ul></div>
+  <!-- Scroll Progress & Ambient Effects -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="brand-bracket">&lt;</span><span class="brand-name">UMARAJ</span><span class="brand-slash">/&gt;</span>
+        <span class="brand-badge">ECE</span>
+      </a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link nav-contact btn-glow-sm ms-lg-2" href="#contact"><i class="bi bi-send-fill me-1"></i> Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <main>
+    <!-- HERO SECTION -->
     <section id="home" class="hero d-flex align-items-center">
-      <div id="three-canvas"></div><div class="hero-grid"></div>
-      <div class="container position-relative"><div class="row align-items-center"><div class="col-lg-8">
-        <p class="eyebrow reveal">/// ELECTRONICS & COMMUNICATION</p>
-        <h1 class="reveal">Hi, I’m <span>Umaraj<br>MB.</span></h1>
-        <p class="hero-copy reveal">Engineering intelligent systems at the intersection of <strong>embedded technology</strong>, robotics and connected devices.</p>
-        <div class="d-flex flex-wrap gap-3 reveal"><a class="btn btn-primary-glow" href="#skills">Explore My Work <i class="bi bi-arrow-down-right"></i></a><a class="btn btn-outline-glow" href="#contact">Get In Touch</a></div>
-      </div><div class="col-lg-4 hero-data reveal"><div class="status-dot"></div><p>STATUS</p><strong>Open to opportunities</strong><hr><p>EDUCATION</p><strong>BE · 7th Semester</strong><span>Alva’s Institute of Engineering & Technology</span></div></div></div>
-      <a href="#about" class="scroll-cue"><span></span>SCROLL TO EXPLORE</a>
+      <div id="three-canvas"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="circuit-pulses" aria-hidden="true">
+        <div class="pulse-line p1"></div>
+        <div class="pulse-line p2"></div>
+        <div class="pulse-line p3"></div>
+      </div>
+      
+      <div class="container position-relative z-2">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="hero-badge reveal">
+              <span class="pulse-beacon"></span>
+              <span class="badge-text">EMBEDDED SYSTEMS & HARDWARE INTERN</span>
+            </div>
+            <h1 class="reveal">
+              Hi, I’m <span class="gradient-text">Umaraj MB.</span>
+            </h1>
+            <h2 class="hero-subtitle reveal">
+              PCB DESIGN ENGINEER &amp; SMT LINE ASSEMBLY
+            </h2>
+            <p class="hero-copy reveal">
+              Electronics & Communication Engineering student passionate about taking hardware concepts from circuit schematics and <strong>SMT line assembly</strong> to <strong>embedded firmware</strong> and intelligent control systems.
+            </p>
+            
+            <div class="hero-tags reveal">
+              <span><i class="bi bi-cpu-fill"></i> PCB Design</span>
+              <span><i class="bi bi-gear-fill"></i> SMT Assembly</span>
+              <span><i class="bi bi-memory"></i> FPGA & Verilog</span>
+              <span><i class="bi bi-terminal-fill"></i> Embedded C</span>
+              <span><i class="bi bi-robot"></i> AI & IoT</span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 reveal mt-4">
+              <a class="btn btn-primary-glow" href="#projects">
+                <i class="bi bi-cpu me-2"></i>View Projects
+              </a>
+              <a class="btn btn-outline-glow" href="#experience">
+                <i class="bi bi-briefcase me-2"></i>Work Experience
+              </a>
+              <a class="btn btn-icon-glow" href="mailto:mbumaraj21@gmail.com" title="Send Email">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+              <a class="btn btn-icon-glow" href="https://github.com/mbumaraj21-droid" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                <i class="bi bi-github"></i>
+              </a>
+              <a class="btn btn-icon-glow" href="https://www.linkedin.com/in/umaraj-mb/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 hero-data reveal mt-5 mt-lg-0">
+            <div class="hud-card">
+              <div class="hud-header">
+                <div class="status-dot"></div>
+                <span class="hud-title">SYSTEM STATUS</span>
+              </div>
+              <div class="hud-status-value">Ready for Opportunities</div>
+              <hr class="hud-divider">
+              
+              <div class="hud-info-item">
+                <span class="hud-label">CURRENT ROLE</span>
+                <span class="hud-val">Embedded Intern @ Vithsutra Tech</span>
+              </div>
+              <div class="hud-info-item">
+                <span class="hud-label">EDUCATION</span>
+                <span class="hud-val">B.E. ECE (7th Sem) · AIET</span>
+              </div>
+              <div class="hud-info-item">
+                <span class="hud-label">LOCATION</span>
+                <span class="hud-val"><i class="bi bi-geo-alt-fill text-cyan"></i> Ranithota, Ballari, India</span>
+              </div>
+              
+              <div class="hud-footer">
+                <span class="hud-tech-code">&lt;HARDWARE_VALIDATION_ACTIVE&gt;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue">
+        <span class="cue-bar"></span>
+        <span class="cue-text">SCROLL TO EXPLORE</span>
+      </a>
     </section>
 
-    <section id="about" class="section about-section"><div class="container"><div class="section-label reveal">01 / ABOUT ME</div><div class="row align-items-center g-5"><div class="col-lg-5 reveal"><div class="portrait-frame"><img class="portrait-image" src="assets/umaraj-mb.png" alt="Umaraj MB" /><div class="frame-corner c1"></div><div class="frame-corner c2"></div><div class="frame-corner c3"></div><div class="frame-corner c4"></div></div></div><div class="col-lg-7"><h2 class="reveal">Building ideas into<br><span>working systems.</span></h2><div class="about-copy reveal"><p>I am <strong>Umaraj MB</strong>, a seventh-semester Bachelor of Engineering student in Electronics and Communication Engineering at Alva’s Institute of Engineering & Technology. I am passionate about taking electronic concepts beyond the drawing board—into practical, reliable systems.</p><p>My interests span embedded programming, circuit design, robotics, and the Internet of Things. Through technical events and hands-on learning, I’m developing the skills to help build thoughtful electronic products that solve real-world problems.</p></div><div class="mini-stats reveal"><div><b>07</b><span>Semester</span></div><div><b>06+</b><span>Core Skills</span></div><div><b>03</b><span>Achievements</span></div></div></div></div></div></section>
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-label reveal">01 / ABOUT ME</div>
+        
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 reveal">
+            <div class="portrait-frame" id="portraitFrame">
+               <img class="portrait-image" src="./assets/umaraj-mb.webp" alt="Portrait of Umaraj MB">
+              <div class="frame-corner c1"></div>
+              <div class="frame-corner c2"></div>
+              <div class="frame-corner c3"></div>
+              <div class="frame-corner c4"></div>
+              <div class="portrait-hud-tag">UMARAJ MB // ECE</div>
+              <div class="portrait-glow-ring"></div>
+            </div>
+          </div>
+          
+          <div class="col-lg-7">
+            <h2 class="reveal">
+              Engineering ideas into<br><span class="gradient-text">practical, reliable hardware.</span>
+            </h2>
+            
+            <div class="about-copy reveal">
+              <p>
+                I am <strong>Umaraj MB</strong>, an Electronics and Communication Engineering student at <strong>Alva’s Institute of Engineering and Technology (AIET)</strong>, currently in my 7th semester. My core objective is to contribute to product development and manufacturing excellence through hands-on experience in <strong>SMT line assembly</strong>, <strong>PCB design</strong>, and <strong>control-based embedded systems</strong>.
+              </p>
+              <p>
+                With active industry internship experience at <em>Vithsutra Technologies</em>, I bridge the gap between circuit theory and physical production—handling schematic capture in Altium/KiCad, surface-mount soldering, testing, hardware debugging, and microcontroller firmware development.
+              </p>
+            </div>
+            
+            <div class="objective-callout reveal">
+              <div class="callout-icon"><i class="bi bi-bullseye"></i></div>
+              <div class="callout-text">
+                <strong>Career Objective:</strong> Seeking an entry-level role in Electronics and Embedded Systems where I can leverage my hardware integration, SMT manufacturing, and firmware validation skills to build reliable electronic products.
+              </div>
+            </div>
 
-    <section id="skills" class="section skills-section"><div class="container"><div class="d-flex justify-content-between align-items-end flex-wrap gap-3"><div><div class="section-label reveal">02 / EXPERTISE</div><h2 class="reveal">My technical <span>toolkit.</span></h2></div><p class="section-intro reveal">A focused blend of hardware, software, and intelligent automation.</p></div><div class="row g-4 mt-2">
-      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><div class="skill-icon"><i class="bi bi-cpu"></i></div><span>01</span><h3>Embedded Systems</h3><p>Designing microcontroller-based systems that connect code with physical hardware.</p><div class="skill-line"></div></article></div>
-      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><div class="skill-icon"><i class="bi bi-braces"></i></div><span>02</span><h3>C Programming</h3><p>Writing efficient, logical code for hardware-focused applications and firmware.</p><div class="skill-line"></div></article></div>
-      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><div class="skill-icon"><i class="bi bi-diagram-3"></i></div><span>03</span><h3>PCB Design</h3><p>Transforming circuit concepts into clean, functional printed circuit boards.</p><div class="skill-line"></div></article></div>
-      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><div class="skill-icon"><i class="bi bi-gear-wide-connected"></i></div><span>04</span><h3>SMT Manufacturing</h3><p>Understanding the precision and process behind modern electronics assembly.</p><div class="skill-line"></div></article></div>
-      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><div class="skill-icon"><i class="bi bi-robot"></i></div><span>05</span><h3>Robotics</h3><p>Exploring motion, sensing, control systems, and automation through robotics.</p><div class="skill-line"></div></article></div>
-      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><div class="skill-icon"><i class="bi bi-broadcast-pin"></i></div><span>06</span><h3>IoT</h3><p>Creating connected devices that collect data, communicate, and respond.</p><div class="skill-line"></div></article></div>
-    </div></div></section>
+            <!-- Stats Counters -->
+            <div class="mini-stats reveal">
+              <div class="stat-box">
+                <b class="counter" data-target="6.5">0.0</b>
+                <span>CGPA (B.E. ECE)</span>
+              </div>
+              <div class="stat-box">
+                <b class="counter" data-target="2">0</b><span>Key Projects</span>
+              </div>
+              <div class="stat-box">
+                <b class="counter" data-target="4">0</b><span>District Sports Awards</span>
+              </div>
+              <div class="stat-box">
+                <b class="counter" data-target="6">0</b><span>Core Tools</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="achievements" class="section achievements-section"><div class="container"><div class="section-label reveal">03 / MILESTONES</div><h2 class="reveal">Academic <span>achievements.</span></h2><div class="timeline mt-5"><article class="achievement reveal"><div class="achievement-no">01</div><div><p class="achievement-type">RESEARCH & PRESENTATION</p><h3>IEEE Paper Presentation</h3><p>Presented technical ideas and research in an IEEE-focused academic forum.</p></div><i class="bi bi-file-earmark-text"></i></article><article class="achievement reveal"><div class="achievement-no">02</div><div><p class="achievement-type">INNOVATION & TEAMWORK</p><h3>Hackathon Winner</h3><p>Built a solution under pressure, turning ideas into a competitive result.</p></div><i class="bi bi-trophy"></i></article><article class="achievement reveal"><div class="achievement-no">03</div><div><p class="achievement-type">GLOBAL EXPOSURE</p><h3>International Conference</h3><p>Attended an international conference to learn from emerging technology and research.</p></div><i class="bi bi-globe2"></i></article></div></div></section>
+    <!-- WORK EXPERIENCE SECTION -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5">
+          <div>
+            <div class="section-label reveal">02 / INDUSTRY EXPERIENCE</div>
+            <h2 class="reveal">Hands-on <span>Work Experience.</span></h2>
+          </div>
+          <span class="experience-badge reveal"><i class="bi bi-activity"></i> ACTIVE INTERNSHIP</span>
+        </div>
 
-    <section id="contact" class="section contact-section"><div class="container"><div class="contact-panel reveal"><p class="eyebrow">04 / LET’S CONNECT</p><h2>Let’s build something<br><span>intelligent.</span></h2><p class="contact-copy">Have a project, opportunity, or idea in mind? I’d love to hear from you.</p><a class="contact-email" href="mailto:mbumaraj21@gmail.com">mbumaraj21@gmail.com <i class="bi bi-arrow-up-right"></i></a><div class="contact-links"><a href="tel:+917795665541"><i class="bi bi-telephone"></i> +91 77956 65541</a><a href="https://www.linkedin.com/in/umaraj-mb/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> LinkedIn</a><a href="https://github.com/mbumaraj21-droid" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a></div></div><footer><span>© 2026 UMARAJ MB</span><span>DESIGNED WITH <i class="bi bi-lightning-charge-fill"></i> & CURIOSITY</span></footer></div></section>
+        <div class="experience-card reveal">
+          <div class="exp-header d-flex flex-wrap justify-content-between align-items-start gap-3">
+            <div>
+              <span class="exp-role">Embedded Systems Intern</span>
+              <h3 class="exp-company">Vithsutra Technologies Pvt. Ltd.</h3>
+              <p class="exp-location"><i class="bi bi-geo-alt-fill text-cyan"></i> SMT Line, AIET Campus, Mijar</p>
+            </div>
+            <div class="exp-period">
+              <span class="period-pill"><i class="bi bi-calendar3"></i> July 2025 – Present</span>
+              <span class="status-live"><i class="bi bi-circle-fill"></i> Ongoing</span>
+            </div>
+          </div>
+          
+          <hr class="exp-divider">
+
+          <div class="exp-responsibilities">
+            <div class="resp-item">
+              <div class="resp-icon"><i class="bi bi-motherboard"></i></div>
+              <div>
+                <h4>SMT Line & PCB Manufacturing Operations</h4>
+                <p>Managed SMT (Surface Mount Technology) line operations, PCB schematic design, component placement, precision soldering, board testing, and hardware troubleshooting to ensure high-quality electronics manufacturing standards.</p>
+              </div>
+            </div>
+
+            <div class="resp-item">
+              <div class="resp-icon"><i class="bi bi-cpu"></i></div>
+              <div>
+                <h4>Embedded Hardware Integration & Validation</h4>
+                <p>Developed and tested embedded systems using microcontrollers, sensors, and communication modules while supporting hardware integration and firmware validation routines.</p>
+              </div>
+            </div>
+
+            <div class="resp-item">
+              <div class="resp-icon"><i class="bi bi-tools"></i></div>
+              <div>
+                <h4>Hardware Debugging & Production Support</h4>
+                <p>Performed rigorous hardware debugging, product validation, signal testing, and production support to improve manufacturing yields and overall product reliability.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-tech-stack">
+            <span class="tech-tag">SMT Line</span>
+            <span class="tech-tag">PCB Assembly</span>
+            <span class="tech-tag">Altium / KiCad</span>
+            <span class="tech-tag">Soldering & Testing</span>
+            <span class="tech-tag">Hardware Debugging</span>
+            <span class="tech-tag">Microcontrollers</span>
+            <span class="tech-tag">Firmware Validation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5">
+          <div>
+            <div class="section-label reveal">03 / TECHNICAL EXPERTISE</div>
+            <h2 class="reveal">Hardware & Firmware <span>Toolkit.</span></h2>
+          </div>
+          <p class="section-intro reveal">Specialized proficiency across circuit engineering, SMT assembly, FPGA, and embedded microcontrollers.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Skill Card 1 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="skill-card">
+              <div class="skill-icon"><i class="bi bi-motherboard"></i></div>
+              <span class="skill-no">01</span>
+              <h3>Hardware & SMT Assembly</h3>
+              <p>PCB Design, PCB Assembly, SMT Line Operations, Circuit Testing, Component Soldering, and System Debugging.</p>
+              <div class="skill-tags">
+                <span>SMT Line</span><span>Soldering</span><span>Testing</span>
+              </div>
+              <div class="skill-line"></div>
+            </article>
+          </div>
+
+          <!-- Skill Card 2 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="skill-card">
+              <div class="skill-icon"><i class="bi bi-cpu"></i></div>
+              <span class="skill-no">02</span>
+              <h3>Embedded Platforms</h3>
+              <p>Hands-on development with Arduino UNO, ESP32, and Raspberry Pi for IoT, automation, and sensor integration.</p>
+              <div class="skill-tags">
+                <span>ESP32</span><span>Raspberry Pi</span><span>Arduino</span>
+              </div>
+              <div class="skill-line"></div>
+            </article>
+          </div>
+
+          <!-- Skill Card 3 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="skill-card">
+              <div class="skill-icon"><i class="bi bi-diagram-3"></i></div>
+              <span class="skill-no">03</span>
+              <h3>PCB Design EDA Tools</h3>
+              <p>Schematic capture and board layout using Altium Designer, KiCad, and Cadence EDA suites.</p>
+              <div class="skill-tags">
+                <span>Altium</span><span>KiCad</span><span>Cadence</span>
+              </div>
+              <div class="skill-line"></div>
+            </article>
+          </div>
+
+          <!-- Skill Card 4 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="skill-card">
+              <div class="skill-icon"><i class="bi bi-braces"></i></div>
+              <span class="skill-no">04</span>
+              <h3>Programming & HDL</h3>
+              <p>Writing efficient low-level C code for microcontrollers and Verilog HDL for FPGA logic synthesis.</p>
+              <div class="skill-tags">
+                <span>C Language</span><span>Verilog HDL</span>
+              </div>
+              <div class="skill-line"></div>
+            </article>
+          </div>
+
+          <!-- Skill Card 5 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="skill-card">
+              <div class="skill-icon"><i class="bi bi-memory"></i></div>
+              <span class="skill-no">05</span>
+              <h3>FPGA & Developer Tools</h3>
+              <p>Xilinx ISE / Vivado, Spartan-6 FPGA synthesis, Microcontroller programmers, and logic analyzer tools.</p>
+              <div class="skill-tags">
+                <span>Xilinx ISE</span><span>Vivado</span><span>Spartan-6</span>
+              </div>
+              <div class="skill-line"></div>
+            </article>
+          </div>
+
+          <!-- Skill Card 6 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="skill-card">
+              <div class="skill-icon"><i class="bi bi-people-fill"></i></div>
+              <span class="skill-no">06</span>
+              <h3>Soft Skills & Leadership</h3>
+              <p>Multitasking under tight deadlines, clear technical communication, problem-solving, teamwork, and sports leadership.</p>
+              <div class="skill-tags">
+                <span>Multitasking</span><span>Problem Solving</span><span>Teamwork</span>
+              </div>
+              <div class="skill-line"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-label reveal">04 / FEATURED PROJECTS</div>
+        <h2 class="reveal">Engineering <span>Projects.</span></h2>
+        
+        <div class="row g-4 mt-4">
+          <!-- Project 1 -->
+          <div class="col-lg-6 reveal">
+            <article class="project-card">
+              <div class="project-header">
+                <div class="project-type"><i class="bi bi-memory"></i> DIGITAL LOGIC & FPGA</div>
+                <span class="project-year">2025</span>
+              </div>
+              <h3>Digital Clock with FPGA Implementation using Verilog</h3>
+              <p class="project-desc">
+                Designed and implemented a 12-hour digital clock circuit on an FPGA using Verilog HDL. Built custom frequency divider modules, 60-second and 60-minute counters, 12-hour logic, and 7-segment display drivers. Simulated and deployed on a Spartan-6 FPGA using Xilinx ISE/Vivado.
+              </p>
+              
+              <div class="project-features">
+                <div class="feature-item"><i class="bi bi-check2-square text-cyan"></i> Frequency Division & Modular Counters</div>
+                <div class="feature-item"><i class="bi bi-check2-square text-cyan"></i> 7-Segment Multiplexed Display Interface</div>
+                <div class="feature-item"><i class="bi bi-check2-square text-cyan"></i> Synthesized on Spartan-6 FPGA via Xilinx ISE</div>
+              </div>
+
+              <div class="project-tags">
+                <span>Verilog HDL</span>
+                <span>Spartan-6 FPGA</span>
+                <span>Xilinx ISE / Vivado</span>
+                <span>Digital Electronics</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-lg-6 reveal">
+            <article class="project-card ongoing-project">
+              <div class="project-header">
+                <div class="project-type"><i class="bi bi-robot"></i> AI & EMBEDDED IOT</div>
+                <span class="project-year badge-ongoing">2026 – Present (Ongoing)</span>
+              </div>
+              <h3>AI-Based Crop Protection System</h3>
+              <p class="project-desc">
+                Developing an intelligent agricultural crop protection system powered by Raspberry Pi and computer vision for real-time wild animal detection. Integrates PIR motion sensors, camera feeds, automated deterrents, and instant IoT alert notifications for farmers.
+              </p>
+
+              <div class="project-features">
+                <div class="feature-item"><i class="bi bi-check2-square text-cyan"></i> Real-time Animal Object Detection</div>
+                <div class="feature-item"><i class="bi bi-check2-square text-cyan"></i> PIR Sensor + Camera Fusion</div>
+                <div class="feature-item"><i class="bi bi-check2-square text-cyan"></i> Automated Deterrent Trigger & IoT Alerts</div>
+              </div>
+
+              <div class="project-tags">
+                <span>Raspberry Pi</span>
+                <span>Python / Computer Vision</span>
+                <span>PIR Sensors</span>
+                <span>IoT Alert System</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-label reveal">05 / ACADEMIC JOURNEY</div>
+        <h2 class="reveal">Education & <span>Qualifications.</span></h2>
+
+        <div class="timeline-v2 mt-5">
+          <!-- Edu Item 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <span class="degree-title">Bachelor of Engineering (B.E.) — Electronics & Communication</span>
+                  <h3 class="inst-name">Alva’s Institute of Engineering and Technology, Mijar</h3>
+                </div>
+                <span class="edu-date"><i class="bi bi-calendar-range"></i> 2023 – Present (7th Sem)</span>
+              </div>
+              <div class="edu-score-pill"><i class="bi bi-award-fill"></i> CGPA: 6.5</div>
+            </div>
+          </div>
+
+          <!-- Edu Item 2 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <span class="degree-title">Pre-University Course (PUC - Science)</span>
+                  <h3 class="inst-name">Best Residential PU College, Ballari</h3>
+                </div>
+                <span class="edu-date"><i class="bi bi-calendar-range"></i> 2021 – 2023</span>
+              </div>
+              <div class="edu-score-pill"><i class="bi bi-percent"></i> Percentage: 51%</div>
+            </div>
+          </div>
+
+          <!-- Edu Item 3 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <span class="degree-title">Secondary School Leaving Certificate (SSLC)</span>
+                  <h3 class="inst-name">Smt. R. T. G. English Medium High School, Ballari</h3>
+                </div>
+                <span class="edu-date"><i class="bi bi-calendar-range"></i> 2011 – 2021</span>
+              </div>
+              <div class="edu-score-pill"><i class="bi bi-percent"></i> SSLC: 69%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CERTIFICATIONS -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <div class="section-label reveal">06 / MILESTONES & HONORS</div>
+        <h2 class="reveal">Achievements & <span>Certifications.</span></h2>
+        
+        <div class="row g-4 mt-4">
+          <!-- Achievements List -->
+          <div class="col-lg-7 reveal">
+            <h3 class="sub-heading mb-4"><i class="bi bi-trophy-fill text-cyan me-2"></i>Key Achievements</h3>
+            <div class="achievement-list">
+              <article class="achievement-card">
+                <div class="ach-icon"><i class="bi bi-trophy"></i></div>
+                <div>
+                  <span class="ach-category">SPORTS & ATHLETICS</span>
+                  <h4>District-Level Sports Certificate Winner</h4>
+                  <p>Earned district-level certificates in <strong>Kabaddi</strong>, <strong>Table Tennis</strong>, <strong>High Jump</strong>, and <strong>Long Jump</strong> for outstanding sports performance.</p>
+                </div>
+              </article>
+
+              <article class="achievement-card">
+                <div class="ach-icon"><i class="bi bi-file-earmark-text"></i></div>
+                <div>
+                  <span class="ach-category">RESEARCH & ACADEMICS</span>
+                  <h4>IEEE Paper Presentation</h4>
+                  <p>Presented technical research and circuit ideas in an IEEE-focused academic paper presentation forum.</p>
+                </div>
+              </article>
+
+              <article class="achievement-card">
+                <div class="ach-icon"><i class="bi bi-globe2"></i></div>
+                <div>
+                  <span class="ach-category">GLOBAL EXPOSURE</span>
+                  <h4>International Conference Delegate</h4>
+                  <p>Attended an international conference exploring next-generation embedded technology and smart electronics research.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Certifications & Summary -->
+          <div class="col-lg-5 reveal">
+            <h3 class="sub-heading mb-4"><i class="bi bi-patch-check-fill text-cyan me-2"></i>Certifications</h3>
+            
+            <div class="cert-card">
+              <div class="cert-header d-flex align-items-center gap-3">
+                <div class="cert-icon"><i class="bi bi-activity"></i></div>
+                <div>
+                  <h4>Digital Signal Processing</h4>
+                  <span class="cert-issuer">Coursera Authorized Certification</span>
+                </div>
+              </div>
+              <p class="cert-desc mt-3">
+                Completed coursework in signal analysis, sampling, discrete Fourier transforms, and digital filter design.
+              </p>
+            </div>
+
+            <!-- Soft Skills Highlight Box -->
+            <div class="soft-skills-box mt-4">
+              <h4><i class="bi bi-stars text-cyan me-2"></i>Core Strengths</h4>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <span class="soft-pill">Multitasking</span>
+                <span class="soft-pill">Technical Communication</span>
+                <span class="soft-pill">Problem-Solving</span>
+                <span class="soft-pill">Team Leadership</span>
+                <span class="soft-pill">Hardware Debugging</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <p class="eyebrow">07 / LET’S CONNECT</p>
+              <h2>Let’s build smart<br><span class="gradient-text">embedded systems.</span></h2>
+              <p class="contact-copy">
+                Open to entry-level roles, internships, and embedded hardware projects. Feel free to reach out via email or phone.
+              </p>
+              
+              <a class="contact-email" href="mailto:mbumaraj21@gmail.com">
+                mbumaraj21@gmail.com <i class="bi bi-arrow-up-right"></i>
+              </a>
+              
+              <div class="contact-links mt-4">
+                <a href="https://wa.me/917795665541?text=Hi%20Umaraj,%20I%20visited%20your%20website%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="contact-btn btn-whatsapp">
+                  <i class="bi bi-whatsapp text-success"></i> WhatsApp Chat
+                </a>
+                <a href="tel:+917795665541" class="contact-btn">
+                  <i class="bi bi-telephone-fill"></i> Call / SMS
+                </a>
+                <a href="https://www.linkedin.com/in/umaraj-mb/" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                  <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/mbumaraj21-droid" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+                <span class="contact-btn text-muted">
+                  <i class="bi bi-geo-alt-fill text-cyan"></i> Ranithota, Ballari
+                </span>
+              </div>
+            </div>
+            
+            <div class="col-lg-5 mt-5 mt-lg-0">
+              <div class="contact-quick-box">
+                <h4><i class="bi bi-envelope-paper-fill text-cyan me-2"></i>Send a Direct Message</h4>
+                <div id="formAlert" class="alert d-none mb-3" role="alert"></div>
+                <form id="contactForm" action="https://formsubmit.co/mbumaraj21@gmail.com" method="POST">
+                  <input type="hidden" name="_subject" value="New Portfolio Message for Umaraj MB" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <div class="mb-3">
+                    <input type="text" name="name" id="formName" class="form-control custom-input" placeholder="Your Name" required />
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" name="email" id="formEmail" class="form-control custom-input" placeholder="Your Email Address" required />
+                  </div>
+                  <div class="mb-3">
+                    <textarea name="message" id="formMessage" class="form-control custom-input" rows="4" placeholder="Type your message, project details, or query here..." required></textarea>
+                  </div>
+                  <button type="submit" id="submitBtn" class="btn btn-primary-glow w-100">
+                    <i class="bi bi-send-fill me-2"></i>Send Email Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <footer class="mt-5">
+            <span>© 2026 UMARAJ MB · Electronics & Communication Engineer</span>
+            <span>BUILT WITH <i class="bi bi-lightning-charge-fill text-cyan"></i> & PRECISION</span>
+          </footer>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script><script src="script.js"></script>
-</body></html>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

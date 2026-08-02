@@ -624,6 +624,14 @@ ul { list-style: none; }
 .project-ongoing {
   border-color: var(--accent);
 }
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
 .project-type {
   font-family: var(--font-code);
   font-size: 0.68rem;
@@ -631,9 +639,18 @@ ul { list-style: none; }
   letter-spacing: 1px;
   color: var(--text-muted);
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 .project-type i { margin-right: 6px; }
+.project-year {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.project-year.ongoing {
+  color: var(--accent);
+  font-size: 0.68rem;
+}
 .project-card h3 {
   font-family: var(--font-heading);
   font-size: 1.3rem;
@@ -679,18 +696,6 @@ ul { list-style: none; }
   border: 1px solid var(--border);
   padding: 4px 10px;
   border-radius: 4px;
-}
-.project-year {
-  position: absolute;
-  top: 28px;
-  right: 28px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-.project-year.ongoing {
-  color: var(--accent);
-  font-size: 0.68rem;
 }
 
 /* ═══════════════════ ACHIEVEMENTS ═══════════════════ */
@@ -933,14 +938,15 @@ ul { list-style: none; }
   .hero-btns { justify-content: center; }
   .hero-socials { justify-content: center; }
   .hero-portrait { max-width: 320px; margin: 0 auto; }
-  .hero-portrait img { height: 340px; }
+  .hero-portrait img { height: auto; max-height: 340px; aspect-ratio: 4/5; }
   .about-grid { grid-template-columns: 1fr; gap: 24px; }
   .edu-grid, .achieve-grid, .contact-grid { grid-template-columns: 1fr; gap: 24px; }
-  .skill-columns { grid-template-columns: repeat(3, 1fr); }
+  .skill-columns { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .projects-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 
 @media (max-width: 768px) {
+  .container { padding: 0 20px; }
   .nav-toggle { display: flex; }
   .nav-links {
     position: fixed;
@@ -967,25 +973,33 @@ ul { list-style: none; }
   }
   .nav-cta { text-align: center; margin-top: 6px; }
   .hero { padding: 85px 0 32px; }
-  .hero h1 { font-size: 2.5rem; }
+  .hero h1 { font-size: 2.3rem; }
   .hero-portrait { max-width: 260px; }
-  .hero-portrait img { height: 300px; }
+  .hero-portrait img { height: auto; max-height: 300px; }
+  .edu-header { flex-direction: column; gap: 4px; }
+  .edu-date { font-size: 0.72rem; color: var(--accent); }
   .skill-columns { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .form-row { grid-template-columns: 1fr; }
   .section { padding: 36px 0; }
-  .exp-card { padding: 24px; }
-  .exp-top { flex-direction: column; gap: 8px; }
+  .exp-card { padding: 20px; }
+  .exp-top { flex-direction: column; gap: 6px; }
   .exp-meta { text-align: left; }
 }
 
+@media (max-width: 576px) {
+  .skill-columns { grid-template-columns: 1fr; gap: 12px; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
+
 @media (max-width: 480px) {
-  .hero h1 { font-size: 2.1rem; }
-  .skill-columns { grid-template-columns: 1fr; }
-  .about-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .stat-number { font-size: 1.8rem; }
-  .stat-item { padding: 12px 8px; }
-  .project-card { padding: 20px; }
-  .project-year { position: static; margin-bottom: 8px; display: inline-block; }
+  .container { padding: 0 16px; }
+  .hero h1 { font-size: 2rem; }
+  .hero-btns { flex-direction: column; width: 100%; }
+  .hero-btns a { justify-content: center; width: 100%; }
+  .stat-number { font-size: 1.7rem; }
+  .stat-item { padding: 10px 6px; }
+  .project-card { padding: 18px; }
+  .project-header { flex-direction: column; align-items: flex-start; gap: 4px; }
   .contact-link-card { padding: 12px 14px; }
 }
 

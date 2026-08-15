@@ -57,29 +57,32 @@ ul { list-style: none; }
   box-shadow: 0 2px 20px rgba(0,0,0,0.06);
 }
 .nav-inner {
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  height: 58px;
+  justify-content: space-between;
+  height: 60px;
+}
+.nav-brand {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: var(--text);
 }
 .nav-links {
   display: flex;
   align-items: center;
   gap: 0;
-  flex-wrap: nowrap;
 }
 .nav-links li a {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 400;
-  color: #777;
-  padding: 6px 15px;
-  letter-spacing: 0.01em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 14px;
   transition: color 0.2s;
-  white-space: nowrap;
 }
 .nav-links li a:hover {
   color: var(--text);
@@ -88,12 +91,11 @@ ul { list-style: none; }
   background: var(--black) !important;
   color: var(--white) !important;
   border-radius: 6px;
-  padding: 8px 22px !important;
-  font-size: 0.82rem !important;
+  padding: 8px 20px !important;
+  font-size: 0.78rem !important;
   font-weight: 600 !important;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
   transition: background 0.2s !important;
-  margin-left: 4px;
 }
 .nav-cta:hover {
   background: var(--accent) !important;
@@ -768,19 +770,6 @@ ul { list-style: none; }
   font-size: 0.84rem;
   color: var(--text-secondary);
   line-height: 1.6;
-}
-.cert-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--accent);
-  margin-top: 8px;
-  transition: color 0.2s;
-}
-.cert-link:hover {
-  color: var(--accent-dark);
 }
 .strengths-box {
   background: var(--white);

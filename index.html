@@ -313,6 +313,12 @@
               <a href="assets/altium_pcb_design_certificate.pdf" target="_blank" class="cert-link"><i class="bi bi-file-earmark-pdf"></i> View Certificate</a>
             </div>
 
+            <div class="achieve-card">
+              <span class="achieve-tag">SIEMENS EMPOWERS EDUCATION</span>
+              <strong>PCB Design and Analysis</strong>
+              <p>Completed specialized training in PCB Design and Analysis through the Siemens Empowers Education program. Strengthened expertise in transforming circuit schematics into high-reliability, production-ready board designs.</p>
+            </div>
+
             <div class="strengths-box">
               <h4><i class="bi bi-stars"></i> Core Strengths</h4>
               <div class="strength-pills">
@@ -396,31 +402,7 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    document.getElementById('navToggle').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-      this.classList.toggle('active');
-    });
-
-    // Close nav on link click (mobile)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('open');
-        document.getElementById('navToggle').classList.remove('active');
-      });
-    });
-
-    // Navbar scroll shadow
-    window.addEventListener('scroll', () => {
-      document.getElementById('siteNav').classList.toggle('scrolled', window.scrollY > 30);
-    });
-
-    // Reveal on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.05 });
-    document.querySelectorAll('.section, .project-card, .edu-card, .achieve-card, .exp-card, .contact-link-card, .hero-text, .hero-portrait').forEach(el => observer.observe(el));
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
+

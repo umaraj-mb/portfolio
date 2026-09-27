@@ -1,7 +1,7 @@
-/* ═══════════════════════════════════════════════════
-   UMARAJ MB — PORTFOLIO STYLESHEET
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+   UMARAJ MB ΓÇö PORTFOLIO STYLESHEET
    Clean white editorial design (inspired by Claude.com)
-   ═══════════════════════════════════════════════════ */
+   ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 
 :root {
   --white: #ffffff;
@@ -20,7 +20,7 @@
   --font-code: 'Fira Code', monospace;
 }
 
-/* ── Reset ── */
+/* ΓöÇΓöÇ Reset ΓöÇΓöÇ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -35,14 +35,14 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
-/* ── Container ── */
+/* ΓöÇΓöÇ Container ΓöÇΓöÇ */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ═══════════════════ NAVBAR ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ NAVBAR ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .site-nav {
   position: fixed;
   top: 0;
@@ -121,7 +121,7 @@ ul { list-style: none; }
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* ═══════════════════ HERO ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ HERO ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .hero {
   padding: 100px 0 45px;
   background: var(--white);
@@ -199,7 +199,7 @@ ul { list-style: none; }
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
 }
 
-/* ── Buttons ── */
+/* ΓöÇΓöÇ Buttons ΓöÇΓöÇ */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -237,7 +237,7 @@ ul { list-style: none; }
   background: var(--white);
 }
 
-/* ═══════════════════ SECTIONS (generic) ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ SECTIONS (generic) ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .section {
   padding: 48px 0;
   opacity: 0;
@@ -283,7 +283,7 @@ ul { list-style: none; }
   font-size: 1.05rem;
 }
 
-/* ═══════════════════ ABOUT ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ ABOUT ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -352,7 +352,7 @@ ul { list-style: none; }
   letter-spacing: 0.8px;
 }
 
-/* ═══════════════════ EDUCATION ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ EDUCATION ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .edu-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -442,7 +442,7 @@ ul { list-style: none; }
   margin-top: 8px;
 }
 
-/* ═══════════════════ EXPERIENCE ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ EXPERIENCE ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .exp-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -547,7 +547,7 @@ ul { list-style: none; }
   border-radius: 4px;
 }
 
-/* ═══════════════════ SKILLS ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ SKILLS ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .skill-pills {
   display: flex;
   flex-wrap: wrap;
@@ -611,7 +611,7 @@ ul { list-style: none; }
   transition: width 0.8s ease;
 }
 
-/* ═══════════════════ PROJECTS ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ PROJECTS ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -692,7 +692,7 @@ ul { list-style: none; }
   padding-left: 20px;
 }
 .project-features li::before {
-  content: '✓';
+  content: 'Γ£ô';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -714,7 +714,7 @@ ul { list-style: none; }
   border-radius: 4px;
 }
 
-/* ═══════════════════ ACHIEVEMENTS ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ ACHIEVEMENTS ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .achieve-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -802,7 +802,7 @@ ul { list-style: none; }
   border-radius: 20px;
 }
 
-/* ═══════════════════ CONTACT ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ CONTACT ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -941,7 +941,7 @@ ul { list-style: none; }
 }
 .btn-submit i { margin-right: 6px; }
 
-/* ═══════════════════ FOOTER ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ FOOTER ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 .site-footer {
   padding: 36px 0;
   border-top: 1px solid var(--border);
@@ -953,7 +953,7 @@ ul { list-style: none; }
   margin-bottom: 2px;
 }
 
-/* ═══════════════════ RESPONSIVE ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ RESPONSIVE ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 @media (max-width: 991px) {
   .hero-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
   .hero-desc { margin: 0 auto 20px; }
@@ -1025,10 +1025,42 @@ ul { list-style: none; }
   .contact-link-card { padding: 12px 14px; }
 }
 
-/* ═══════════════════ SCROLLBAR ═══════════════════ */
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ SCROLLBAR ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-alt); }
 ::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
-. c e r t - l i n k   {   d i s p l a y :   i n l i n e - f l e x ;   a l i g n - i t e m s :   c e n t e r ;   g a p :   6 p x ;   f o n t - s i z e :   0 . 7 8 r e m ;   f o n t - w e i g h t :   5 0 0 ;   c o l o r :   v a r ( - - a c c e n t ) ;   m a r g i n - t o p :   8 p x ;   t r a n s i t i o n :   c o l o r   0 . 2 s ;   }   . c e r t - l i n k : h o v e r   {   c o l o r :   v a r ( - - a c c e n t - d a r k ) ;   }  
- 
+
+
+/* ═══════════════════ CERT LINK ═══════════════════ */
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 8px;
+  transition: color 0.2s;
+}
+.cert-link:hover { color: var(--accent-dark); }
+
+/* ── Form Alert (AJAX contact feedback) ── */
+.form-alert {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.form-alert--success {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+.form-alert--error {
+  background: #fff1f2;
+  color: #9f1239;
+  border: 1px solid #fecdd3;
+}

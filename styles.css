@@ -633,15 +633,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   font-family: var(--font-sans);
   font-size: 0.82rem;
   color: var(--body-dark);
-  padding: 3px 0 3px 20px;
-  position: relative;
-}
-.project-features li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--body);
-  font-size: 0.82rem;
+  padding: 3px 0;
 }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
 .project-tags span {
